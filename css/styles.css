@@ -5,15 +5,13 @@
 :root{
     --very-dark-magenta: hsl(300, 43%, 22%);
     --soft-pink: hsl(333, 80%, 67%);
-
     --dark-grayish-magenta: hsl(303, 10%, 53%);
     --light-grayish-magenta: hsl(300, 24%, 96%);
-    --white: hsl(0, 0%, 100%);
 }
 
 /*--------------------GENERIC CLASSES--------------------*/
-/* TEXT COLOR */
-.text-dark-magenta{
+/* TEXT COLORS */
+.text-very-dark-magenta{
     color: var(--very-dark-magenta);
 }
 
@@ -29,7 +27,7 @@
     color: var(--light-grayish-magenta);
 }
 
-/* BG COLOR */
+/* BACKGROUND COLORS */
 .bg-light-grayish-magenta{
     background-color: var(--light-grayish-magenta);
 }
@@ -58,20 +56,8 @@ body{
     background: url('../images/bg-pattern-top-mobile.svg') no-repeat top left, url('../images/bg-pattern-bottom-mobile.svg') no-repeat bottom right;
 }
 
-/*--------------------DIVERS ADJUSTEMENTS--------------------*/
-.container .card{
-    max-width: 420px;
-    margin: auto;
-}
-
-.container .card .card-body .card-text{
-    clear: both;
-}
-
-.container .card .card-body img{
-    width: 50px;
-}
-
+/*--------------------VARIOUS ADJUSTMENTS--------------------*/
+/* First row intro title */
 #main-title{
     font-size: 2rem;
     line-height: 1;
@@ -80,13 +66,31 @@ body{
     transition: font-size .2s ease;
 }
 
+/* Rewards */
 .rewards{
     max-width: 600px;
     margin: auto;
 }
 
+/* Rewards text */
 .rewards p{
     font-size: .8rem;
+}
+
+/* Profile card */
+.container .card{
+    max-width: 420px;
+    margin: auto;
+}
+
+/* Profil picture */
+.container .card .card-body img{
+    width: 50px;
+}
+
+/* Profil content */
+.container .card .card-body .card-text{
+    clear: both;
 }
 
 /*--------------------FEM STYLE--------------------*/
@@ -107,10 +111,14 @@ body{
 }
 
 @media screen and (min-width: 992px){
-    #last-card{
-        margin-top: 48px!important;
+
+    /* First row intro title */
+    #main-title{
+        font-size: 2.5rem;
+        line-height: 1;
     }
 
+    /* Rewards */
     .rewards:first-of-type{
         margin-left: 0;
         margin-right: auto;
@@ -121,13 +129,25 @@ body{
         margin-left: auto;
     }
 
-    #main-title{
-        font-size: 2.5rem;
-        line-height: 1;
+    /* Profile card */
+    #last-card{
+        margin-top: 48px!important;
     }
 }
 
 @media screen and (min-width: 1400px){
+
+    /* First row intro title */
+    #main-title{
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    #main-title+p{
+        font-size: 1.2rem;
+    }
+
+    /* Rewards */
     .rewards-box{
         padding-left: 100px;
     }
@@ -145,14 +165,5 @@ body{
     .rewards:last-of-type{
         margin-right: 0;
         margin-left: 100px;
-    }
-
-    #main-title{
-        font-size: 3rem;
-        line-height: 1;
-    }
-
-    #main-title+p{
-        font-size: 1.2rem;
     }
 }
